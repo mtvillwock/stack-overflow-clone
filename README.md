@@ -1,5 +1,6 @@
 # stack-overflow-clone
-Status: Functional, but the CSS leaves something to be desired.
+Status: Functional. Can add, edit, delete, upvote, and downvote questions and answers.
+Requires GitHub Zen API token if you want to clone it.
 
 ## What is it?
 Ruby on Rails web app built to mimic the functionality of Stack Overflow. 
