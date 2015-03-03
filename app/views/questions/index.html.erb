@@ -1,5 +1,5 @@
 <div class="new_form">
-  <h4>Waz yo issue?</h4>
+  <h4>Enter Your Question</h4>
 <%= render 'form' %>
 </div>
 
@@ -11,11 +11,11 @@
     <p><%= question.description %></p>
     <p>Votes: <span class="vote"><%= question.vote %></span></p>
     <ul>
-      <li class="button upvote"><%= link_to 'flawless', upvote_question_path(question) %></li>
-      <li class="button downvote"><%= link_to "that's that ish I don't like", downvote_question_path(question) %></li>
+      <li class="button upvote"><%= link_to 'Upvote', upvote_question_path(question) %></li>
+      <li class="button downvote"><%= link_to "Downvote", downvote_question_path(question) %></li>
       <li class="button"><%= link_to 'Show', question_path(question) %></li>
       <li class="button"><%= link_to 'Edit', edit_question_path(question)%></li>
-      <li class="button"><%= link_to 'Obliterate', question_path(question), class: "delete-question" %></li>
+      <li class="button"><%= link_to 'Delete', question_path(question), class: "delete-question" %></li>
     </ul>
   </div>
   <% end %>
