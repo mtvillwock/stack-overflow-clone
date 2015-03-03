@@ -1,0 +1,12 @@
+<div class="answer" id="<%= answer.id %>">
+  <p><strong>Username: </strong><%= answer.username %></p>
+  <p><%= answer.body %></p>
+  <p>Votes: <span class="vote"><%= answer.vote %></span></p>
+  <ul>
+    <li class="button upvote"><%= link_to 'flawless', upvote_question_answer_path(answer.question, answer) %></li>
+    <li class="button downvote"><%= link_to "that's that shit I don't like", downvote_question_answer_path(answer.question, answer) %></li>
+    <li class="button"><%= link_to 'Back to questions', questions_path %></li>
+    <li class="button"><%= link_to 'Edit', edit_question_answer_path(answer.question, answer) %></li>
+    <li class="button"><%= link_to 'Delete', question_answer_path(answer.question, answer), class: "delete-answer" %></li>
+  </ul>
+</div>

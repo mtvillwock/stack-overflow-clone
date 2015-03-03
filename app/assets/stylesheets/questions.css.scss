@@ -1,0 +1,24 @@
+// Place all the styles related to the questions controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+  background-color:  #eee;
+}
+
+.button {
+  display: inline;
+  margin-right: 10px;
+}
+
+.new_form {
+  float: right;
+}
+
+.question-template {
+  display: none;
+}
+
+.zen-quote {
+  color: red;
+}
