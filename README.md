@@ -4,7 +4,7 @@ Requires GitHub Zen API token if you want to clone it.
 
 ## What is it?
 Ruby on Rails web app built to mimic the functionality of Stack Overflow. 
-Utilizes AJAX and ERB partials to facilitate smoother user experience.
+Utilizes AJAX and form partials to facilitate smoother user experience.
 Includes GitHub Zen API call for fun.
 
 Collaborators:
