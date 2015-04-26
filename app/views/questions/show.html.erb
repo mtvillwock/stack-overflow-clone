@@ -1,19 +1,23 @@
-<h1><strong><%= @question.title %></strong></h1>
-<p><strong><%= @question.description %></strong></p>
+<%= link_to questions_path(@question) do %>
+<h3><%= @question.title %></h3>
+<% end %>
+<p><%= @question.description %></p>
 <p>
   <strong>Username:</strong>
   <%= @question.username %>
 </p>
 
 <div class="answer-list">
-<h2>Answers</h2>
+<% unless @answers.length == 0 %>
+<h4>Answers</h4>
 <% @answers.each do |answer| %>
   <%= render 'answers/answer', answer: answer %>
+<% end %>
 <% end %>
 </div>
 
 <h2>Add an answer:</h2>
 <%= render 'answers/form' %>
 
-<%= link_to 'Back to Questions', questions_path %>
-<%= link_to 'Edit', edit_question_path(@question) %>
+<li class="button"><%= link_to 'Back to Questions', questions_path %></li>
+<li class="button"><%= link_to 'Edit', edit_question_path(@question) %></li>

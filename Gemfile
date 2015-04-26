@@ -21,7 +21,9 @@ gem 'unicorn'
 gem 'capistrano-rails', group: :development
 
 gem 'debugger', group: [:development, :test]
+
 gem 'underscore-rails'
+
 group :test do
   gem 'rspec-rails'
   gem 'capybara'
@@ -30,4 +32,9 @@ group :test do
   gem 'faker'
   gem 'better_errors'
   gem 'binding_of_caller'
+end
+
+group :production do
+  gem 'thin'
+  gem 'rails_12factor'
 end

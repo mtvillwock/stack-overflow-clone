@@ -1,11 +1,9 @@
 <%= form_for([@question, @blank_answer]) do |f| %>
   <p>
-    <%= f.label :username %>
-    <%= f.text_field :username %>
+    <%= f.text_field :username, placeholder: "username" %>
   </p>
   <p>
-    <%= f.label :answer %>
-    <%= f.text_field :body %>
+    <%= f.text_area :body, placeholder: "your answer" %>
   </p>
   <p>
     <%= f.submit %>

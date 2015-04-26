@@ -14,17 +14,13 @@
 <% end %>
 
   <p>
-    <%= f.label :username %> <br>
-
-    <%= f.text_field :username %>
+    <%= f.text_field :username , placeholder: "username"%>
   </p>
   <p>
-    <%= f.label :title %> <br>
-    <%= f.text_field :title, class: "question-title" %>
+    <%= f.text_field :title, class: "question-title" , placeholder: "what's your question"%>
   </p>
   <p>
-    <%= f.label :description %> <br>
-    <%= f.text_field :description, class: "question-description"%>
+    <%= f.text_area :description, class: "question-description", placeholder: "explain what isn't working"%>
   </p>
     <%= f.submit %>
   </p>

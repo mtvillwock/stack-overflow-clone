@@ -7,12 +7,16 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <div class="container">
+  <%= link_to '/' do %>
   <h1>DBC Overflow</h1>
-  <div class="zen-quote">
+  <% end %>
+  <p class="zen-quote">
     <%= @response %>
-  </div>
+  </p>
 
-<%= yield %>
+    <%= yield %>
+  </div>
 
 </body>
 </html>
