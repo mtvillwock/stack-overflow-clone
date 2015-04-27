@@ -1,5 +1,5 @@
 # Stack Overflow Clone
-Status: Functional.
+Status: Deployed. See it [here](http://mtvillwock-stack-overflow.herokuapp.com).
 
 Users can add, edit, delete, upvote, and downvote questions and answers.
 
