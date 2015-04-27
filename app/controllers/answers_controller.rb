@@ -1,5 +1,4 @@
 class AnswersController < ApplicationController
-  # respond_to :js
   def show
     @answer = Answer.find(params[:id])
   end
@@ -7,14 +6,12 @@ class AnswersController < ApplicationController
   def create
     @question = Question.find(params[:question_id])
     @answer = @question.answers.create(answer_params)
-    puts @answer.inspect
     render partial: 'answers/answer', locals: { answer: @answer }
     # redirect_to question_path(@question)
   end
 
   def edit
     @answer = Answer.find(params[:id])
-    p params[:id]
     @question = Question.find(@answer.question_id)
   end
 

@@ -1,0 +1,14 @@
+<div class="question" id="<%= @question.id %>">
+  <%= link_to question_path(@question) do %>
+  <h3><%= @question.title %></h3>
+  <% end %>
+  <p><%= @question.description %></p>
+  <p>Votes: <span class="vote"><%= @question.vote %></span></p>
+  <p>Answers: <%= @question.answers.count %></p>
+  <ul>
+    <li class="button upvote"><%= link_to 'Upvote', upvote_question_path(@question) %></li>
+    <li class="button downvote"><%= link_to "Downvote", downvote_question_path(@question) %></li>
+    <li class="button"><%= link_to 'Edit', edit_question_path(@question)%></li>
+    <li class="button"><%= link_to 'Delete', question_path(@question), class: "delete-question" %></li>
+  </ul>
+</div>
