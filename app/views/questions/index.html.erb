@@ -4,6 +4,7 @@
 
 <h4>Questions</h4>
 <div class="question-list">
+  <% unless @questions.length == 0 %>
   <% @questions.each do |question| %>
   <div class="question" id="<%= question.id %>">
     <%= link_to question_path(question) do %>
@@ -19,6 +20,9 @@
       <li class="button"><%= link_to 'Delete', question_path(question), class: "delete-question" %></li>
     </ul>
   </div>
+  <% end %>
+  <% else %>
+  <p>There are currently no questions. Please create one!</p>
   <% end %>
 </div>
 
